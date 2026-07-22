@@ -1,0 +1,32 @@
+name: Publicar Revista
+
+on:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Instalar TinyTeX (para PDFs con LaTeX)
+        run: |
+          quarto install tool tinytex
+
+      - name: Compilar sitio y PDFs
+        run: quarto render
+
+      - name: Desplegar en GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
