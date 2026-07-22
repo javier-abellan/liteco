@@ -1,1 +1,15 @@
+---
+title: "Literatura Económica"
+subtitle: "Revista de análisis de literatura científica y reseñas de libros académicos"
+listing:
+  contents: 
+    - "vol*/**/*.qmd"
+  type: default
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, subtitle, author, categories]
+---
 
+## Publicaciones recientes
