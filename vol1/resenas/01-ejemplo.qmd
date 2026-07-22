@@ -1,1 +1,36 @@
+---
+title: "Reseña: El capital en el siglo XXI"
+subtitle: "Thomas Piketty. Harvard University Press, 2014, 696 pp."
+author:
+  - name: "María García"
+    affiliation: "Universidad Nacional de Economía"
+date: "2026-03-15"
+format:
+  html:
+    other-links:
+      - text: Descargar versión PDF
+        icon: file-pdf
+        href: 01-ejemplo.pdf
+  pdf:
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \rhead{\textit{Literatura Económica}, Vol. 1 (2026)}
+        \cfoot{\thepage}
+---
 
+## Ficha bibliográfica
+
+* **Título:** El capital en el siglo XXI
+* **Autor:** Thomas Piketty
+* **Editorial:** Harvard University Press
+* **Año:** 2014
+* **ISBN:** 978-0674430006
+
+---
+
+## Texto de la reseña
+
+Escribe aquí el contenido de la reseña...
