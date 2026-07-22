@@ -17,13 +17,10 @@ jobs:
       - name: Instalar Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Instalar TinyTeX
-        run: quarto install tool tinytex --no-prompt
+      - name: Instalar TinyTeX (LaTeX)
+        uses: r-lib/actions/setup-tinytex@v2
 
-      - name: Compilar sitio
-        run: quarto render
-
-      - name: Desplegar en GitHub Pages
+      - name: Publicar en GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
