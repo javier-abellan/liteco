@@ -1,1 +1,35 @@
+project:
+  type: website
+  output-dir: _site
 
+website:
+  title: "Literatura Económica"
+  description: "Revista académica de reseñas y revisiones de literatura económica"
+  navbar:
+    right:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Volumen 1 (2026)"
+        menu:
+          - text: "Reseñas de Libros"
+            href: vol1/resenas/index.qmd
+      - text: "Sobre la Revista"
+        href: acerca.qmd
+
+format:
+  html:
+    theme: flatly
+    css: css/styles.css
+    toc: true
+    grid:
+      body-width: 800px
+  pdf:
+    documentclass: article
+    papersize: a4
+    margin-left: 2.5cm
+    margin-right: 2.5cm
+    margin-top: 2.5cm
+    margin-bottom: 2.5cm
+    linestretch: 1.15
+    number-sections: false
+    colorlinks: true
