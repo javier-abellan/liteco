@@ -17,11 +17,10 @@ jobs:
       - name: Instalar Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Instalar TinyTeX (para PDFs con LaTeX)
-        run: |
-          quarto install tool tinytex
+      - name: Instalar TinyTeX
+        run: quarto install tool tinytex --no-prompt
 
-      - name: Compilar sitio y PDFs
+      - name: Compilar sitio
         run: quarto render
 
       - name: Desplegar en GitHub Pages
